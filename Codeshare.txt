@@ -1,0 +1,151 @@
+  ///----PRYECTO FINAL DE LABORATORIO----///
+
+
+
+///---Estructuras que vamos a utilzar---\\\
+
+/*  Estructuras De Usuario y de Adminitrador
+ 
+typedef struct {
+char nombre [30];
+int ID[];
+int contraseña[20];
+int cancionesFavoritas [20];
+int estadoActividad;
+} stUsuario;
+
+
+typedef struct {
+char nombre [30];
+int contraseña [20];
+int ID[];
+int estadoActividad;
+} stAdministrador;
+
+typedef struct
+{
+
+    char nombre [40];
+    char autorBanda [40];
+    char genero [40];
+
+} stCanciones;
+
+*/
+///---Fin de estructuras que vamos a utilzar---\\\
+
+                                    ---------------------------------Cosas que tenemos q armar y base de guia--------------------------------
+
+/* Usuario Cliente */
+typedef struct {
+  
+  nombreDeUsuario;
+  int numeroID; /////----> a verse.
+  lista de favoritos //////-----> arreglo. 
+  modificacion de su perfil ////-------> pisar variable
+  puede agregar musica nueva ///------> pila (Administrador.)
+  dar un vistazo de las canciones disponibles ///-----> recorrer (estructura canciones. dentro de esto las variables de distinto tipo)
+  visualizar playlist disponibles o temas recomendados ////-----> dios nos ayudes. (la funcion random debe dar direccion de memoria(puntero). para poder acceder a los datos)
+  cerrar sesion ///-----> (Funcion system)
+  darse de baja ///-----> (Con unflag 0/1)
+  abrir sesion ///------> (al principio tiene que pedir condiciones para poder acceder (si esta activo, y si es valido el usuario.)
+  crear usuario ////-----> que compare dos, si son iguales tira error y pide otra. Contraseña con limite de caracteres.
+  
+    
+    "codear" → tomar y joder 
+   
+} stUsuario;
+/* Usuario Cliente */
+
+
+/* Administradores */
+typedef struct {
+  
+  nombre ///-----> 
+  designar parametros o reglas para el uso de app ///----> 
+  ver los usuarios disponibles y dados de baja    ///----> (acceder a los archivos usuarios que pueda pisar el flag, preguntar despues si e correcto. )
+  poder ver info del usuario 
+  harcodear con algnos temas principales ////------> (Funcion de lectura de teclado y guardarla en una variable.)
+  
+  
+} stAdmin;
+/* Administradores */
+
+
+/* Canciones */
+typedef struct {
+  
+  nombre ////-----> (funcion de estructura)
+  genero ////-----> (funcion de estructura)
+  autor/banda /////----->(funcion de estructura)
+  mostrar por pantalla ////----->( funcion print. /// llamarla funcion.)
+  modificable por el admin /// crear archivos y trabajarlo como archivos (a revision)
+  la lista en la q este agregado ///-----> a revision. 
+  
+  
+} stCanciones
+/* Canciones */
+
+                            ---------------------------------Fin de cosas que tenemos q armar y base de guia--------------------------------
+
+
+
+
+///---PROTOTIPADO DE LAS FUNCIONES---\\\
+
+///---prototipado de canciones---\\\
+ stCanciones agregarCancion();
+ void mostrarCancion (stCanciones cancion);
+///---prototipado de canciones---\\\
+
+
+
+//----------------------------------------------------------\\
+Int Main()
+{
+  
+  
+  
+  
+  
+  
+  
+}
+
+
+
+///---FUNCIONES---\\\
+
+///---funciones de canciones---\\\
+stCanciones agregarCancion()
+{
+
+    stCanciones cancion;
+
+
+    printf ("ingrese el nombre de la cancion: \n");
+    gets(cancion.nombre);
+
+    printf ("Ingrese el autor/banda que hizo el tema: \n");
+    gets (cancion.autorBanda);
+
+    printf("Ingrese el genero de la cancion que agrega: \n");
+    gets (cancion.genero);
+
+
+ return cancion;
+
+}
+
+
+void mostrarCancion (stCanciones cancion)
+
+ {
+     printf("LA CANCION QUE USTED ACABA DE AGREGAR ES: \n");
+
+     printf("%s \n ", cancion.nombre);
+     printf("%s \n ", cancion.autorBanda);
+     printf("%s \n ", cancion.genero);
+
+ }
+///---funciones de canciones---\\\
